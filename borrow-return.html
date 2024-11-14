@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow/Return Books</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Library Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="manage-books.html">Manage Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manage-members.html">Manage Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="borrow-return.html">Borrow/Return Books</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Borrow/Return Books</h1>
+        
+        <h2>Borrow Book</h2>
+        <form id="borrowForm">
+            <div class="form-group">
+                <label for="borrowMember">Member Name:</label>
+                <select class="form-control" id="borrowMember" required>
+                    <option value="">Select Member</option>
+                    <!-- Member options will be populated here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="borrowBook">Book Title:</label>
+                <select class="form-control" id="borrowBook" required>
+                    <option value="">Select Book</option>
+                    <!-- Book options will be populated here -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Borrow Book</button>
+        </form>
+
+        <h2 class="mt-4">Return Book</h2>
+        <form id="returnForm">
+            <div class="form-group">
+                <label for="returnMember">Member Name:</label>
+                <select class="form-control" id="returnMember" required>
+                    <option value="">Select Member</option>
+                    <!-- Member options will be populated here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="returnBook">Book Title:</label>
+                <select class="form-control" id="returnBook" required>
+                    <option value="">Select Book</option>
+                    <!-- Book options will be populated here -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger">Return Book</button>
+        </form>
+
+        <h2 class="mt-4">Borrowed Books</h2>
+        <table class="table" id="borrowedBooksTable">
+            <thead>
+                <tr>
+                    <th>Member Name</th>
+                    <th>Book Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Borrowed book entries will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/borrow-return.js"></script>
+</body>
+</html>

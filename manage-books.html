@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Books</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Library Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="manage-books.html">Manage Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manage-members.html">Manage Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="borrow-return.html">Borrow/Return Books</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Manage Books</h1>
+        <form id="bookForm">
+            <input type="hidden" id="bookId">
+            <div class="form-group">
+                <label for="bookTitle">Book Title:</label>
+                <input type="text" class="form-control" id="bookTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="bookAuthor">Author:</label>
+                <input type="text" class="form-control" id="bookAuthor" required>
+            </div>
+            <div class="form-group">
+                <label for="bookGenre">Genre:</label>
+                <input type="text" class="form-control" id="bookGenre" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add/Update Book</button>
+        </form>
+
+        <h2 class="mt-4">All Books</h2>
+        <table class="table" id="booksTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Book entries will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/manage-books.js"></script>
+</body>
+</html>
